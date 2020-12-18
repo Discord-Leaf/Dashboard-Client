@@ -1,8 +1,11 @@
 //General imports
 import axios from 'axios';
 
+//Imports - config
+import Config from '../../config.js';
+
 const updateGuildLevel = (guildId, leveling) => {
-    return axios.put(`https://api.leaf-bot.xyz/api/discord/guilds/${guildId}/leveling`, {
+    return axios.put(`${Config.domain}/api/discord/guilds/${guildId}/leveling`, {
         leveling,
     }, {
         withCredentials: true,

@@ -35714,7 +35714,25 @@ module.exports.default = axios;
 
 },{"./utils":"node_modules/axios/lib/utils.js","./helpers/bind":"node_modules/axios/lib/helpers/bind.js","./core/Axios":"node_modules/axios/lib/core/Axios.js","./core/mergeConfig":"node_modules/axios/lib/core/mergeConfig.js","./defaults":"node_modules/axios/lib/defaults.js","./cancel/Cancel":"node_modules/axios/lib/cancel/Cancel.js","./cancel/CancelToken":"node_modules/axios/lib/cancel/CancelToken.js","./cancel/isCancel":"node_modules/axios/lib/cancel/isCancel.js","./helpers/spread":"node_modules/axios/lib/helpers/spread.js"}],"node_modules/axios/index.js":[function(require,module,exports) {
 module.exports = require('./lib/axios');
-},{"./lib/axios":"node_modules/axios/lib/axios.js"}],"src/hooks/getUser.js":[function(require,module,exports) {
+},{"./lib/axios":"node_modules/axios/lib/axios.js"}],"config.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var Config = {
+  "domain": "https://api.leaf-bot.xyz",
+  "client_id": "782729707740200980"
+};
+/*
+* Domain is the auth server. Not the dashboard.
+*/
+//Exports
+
+var _default = Config;
+exports.default = _default;
+},{}],"src/hooks/getUser.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35724,11 +35742,14 @@ exports.default = void 0;
 
 var _axios = _interopRequireDefault(require("axios"));
 
+var _config = _interopRequireDefault(require("../../config.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //General imports
+//Imports - config
 var getUser = function getUser() {
-  return _axios.default.get('https://api.leaf-bot.xyz/api/auth', {
+  return _axios.default.get("".concat(_config.default.domain, "/api/auth"), {
     withCredentials: true
   });
 }; //Exports
@@ -35736,23 +35757,10 @@ var getUser = function getUser() {
 
 var _default = getUser;
 exports.default = _default;
-},{"axios":"node_modules/axios/index.js"}],"config.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var Config = {
-  "domain": "https://api.leaf-bot.xyz",
-  //This is of the server
-  "client_id": "782729707740200980"
-}; //Exports
-
-var _default = Config;
-exports.default = _default;
-},{}],"src/assets/logo.png":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","../../config.js":"config.js"}],"src/assets/logo.png":[function(require,module,exports) {
 module.exports = "/logo.8244f1f8.png";
+},{}],"src/assets/discord.png":[function(require,module,exports) {
+module.exports = "/discord.3db15700.png";
 },{}],"src/assets/menuarrow.svg":[function(require,module,exports) {
 module.exports = "/menuarrow.d84dd0ef.svg";
 },{}],"src/components/Header/header.js":[function(require,module,exports) {
@@ -35774,6 +35782,8 @@ var _getUser = _interopRequireDefault(require("../../hooks/getUser.js"));
 var _config = _interopRequireDefault(require("../../../config.js"));
 
 var _logo = _interopRequireDefault(require("../../assets/logo.png"));
+
+var _discord = _interopRequireDefault(require("../../assets/discord.png"));
 
 var _menuarrow = _interopRequireDefault(require("../../assets/menuarrow.svg"));
 
@@ -35881,7 +35891,13 @@ var Header = function Header() {
       className: "nav_links"
     }, "Github"))), user ? /*#__PURE__*/_react.default.createElement("div", {
       className: "user-wrapper"
-    }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("img", {
+    }, /*#__PURE__*/_react.default.createElement("div", null, user.avatar === 'null' ? /*#__PURE__*/_react.default.createElement("img", {
+      onClick: toggleMenu,
+      src: _discord.default,
+      width: "40px",
+      height: "40px",
+      className: "uimg"
+    }) : /*#__PURE__*/_react.default.createElement("img", {
       onClick: toggleMenu,
       src: "https://cdn.discordapp.com/avatars/".concat(user.discordId, "/").concat(user.avatar, ".png"),
       width: "40px",
@@ -35946,7 +35962,7 @@ var Header = function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../../styles/header.css":"src/styles/header.css","../../hooks/getUser.js":"src/hooks/getUser.js","../../../config.js":"config.js","../../assets/logo.png":"src/assets/logo.png","../../assets/menuarrow.svg":"src/assets/menuarrow.svg"}],"src/styles/footer.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../../styles/header.css":"src/styles/header.css","../../hooks/getUser.js":"src/hooks/getUser.js","../../../config.js":"config.js","../../assets/logo.png":"src/assets/logo.png","../../assets/discord.png":"src/assets/discord.png","../../assets/menuarrow.svg":"src/assets/menuarrow.svg"}],"src/styles/footer.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -46031,11 +46047,14 @@ exports.default = void 0;
 
 var _axios = _interopRequireDefault(require("axios"));
 
+var _config = _interopRequireDefault(require("../../config.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //General imports
+//Imports - config
 var getGuilds = function getGuilds() {
-  return _axios.default.get('https://api.leaf-bot.xyz/api/discord/guilds', {
+  return _axios.default.get("".concat(_config.default.domain, "/api/discord/guilds"), {
     withCredentials: true
   });
 }; //Exports
@@ -46043,14 +46062,12 @@ var getGuilds = function getGuilds() {
 
 var _default = getGuilds;
 exports.default = _default;
-},{"axios":"node_modules/axios/index.js"}],"src/styles/menuwrapper.css":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","../../config.js":"config.js"}],"src/styles/menuwrapper.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/assets/discord.png":[function(require,module,exports) {
-module.exports = "/discord.3db15700.png";
-},{}],"src/pages/menuwrapper.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/pages/menuwrapper.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52901,11 +52918,14 @@ exports.default = void 0;
 
 var _axios = _interopRequireDefault(require("axios"));
 
+var _config = _interopRequireDefault(require("../../config.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //General imports
+//Imports - config
 var updateGuildPrefix = function updateGuildPrefix(guildId, prefix) {
-  return _axios.default.put("https://api.leaf-bot.xyz/api/discord/guilds/".concat(guildId, "/prefix"), {
+  return _axios.default.put("".concat(_config.default.domain, "/api/discord/guilds/").concat(guildId, "/prefix"), {
     prefix: prefix
   }, {
     withCredentials: true
@@ -52915,7 +52935,7 @@ var updateGuildPrefix = function updateGuildPrefix(guildId, prefix) {
 
 var _default = updateGuildPrefix;
 exports.default = _default;
-},{"axios":"node_modules/axios/index.js"}],"src/pages/settings/prefix.jsx":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","../../config.js":"config.js"}],"src/pages/settings/prefix.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52977,11 +52997,14 @@ exports.default = void 0;
 
 var _axios = _interopRequireDefault(require("axios"));
 
+var _config = _interopRequireDefault(require("../../config.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //General imports
+//Imports - config
 var getGuildConfig = function getGuildConfig(guildId) {
-  return _axios.default.get("https://api.leaf-bot.xyz/api/discord/guilds/".concat(guildId, "/config"), {
+  return _axios.default.get("".concat(_config.default.domain, "/api/discord/guilds/").concat(guildId, "/config"), {
     withCredentials: true
   });
 }; //Exports
@@ -52989,7 +53012,7 @@ var getGuildConfig = function getGuildConfig(guildId) {
 
 var _default = getGuildConfig;
 exports.default = _default;
-},{"axios":"node_modules/axios/index.js"}],"src/styles/settings/content.css":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","../../config.js":"config.js"}],"src/styles/settings/content.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -53004,11 +53027,14 @@ exports.default = void 0;
 
 var _axios = _interopRequireDefault(require("axios"));
 
+var _config = _interopRequireDefault(require("../../config.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //General imports
+//Imports - config
 var updateGuildMusic = function updateGuildMusic(guildId, music) {
-  return _axios.default.put("https://api.leaf-bot.xyz/api/discord/guilds/".concat(guildId, "/music"), {
+  return _axios.default.put("".concat(_config.default.domain, "/api/discord/guilds/").concat(guildId, "/music"), {
     music: music
   }, {
     withCredentials: true
@@ -53018,7 +53044,7 @@ var updateGuildMusic = function updateGuildMusic(guildId, music) {
 
 var _default = updateGuildMusic;
 exports.default = _default;
-},{"axios":"node_modules/axios/index.js"}],"src/pages/settings/music.jsx":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","../../config.js":"config.js"}],"src/pages/settings/music.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53089,11 +53115,14 @@ exports.default = void 0;
 
 var _axios = _interopRequireDefault(require("axios"));
 
+var _config = _interopRequireDefault(require("../../config.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //General imports
+//Imports - config
 var commandDelete = function commandDelete(guildId, usage, response) {
-  return _axios.default.put("https://api.leaf-bot.xyz/api/discord/guilds/".concat(guildId, "/command-delete"), {
+  return _axios.default.put("".concat(_config.default.domain, "/api/discord/guilds/").concat(guildId, "/command-delete"), {
     usage: usage,
     response: response
   }, {
@@ -53104,7 +53133,7 @@ var commandDelete = function commandDelete(guildId, usage, response) {
 
 var _default = commandDelete;
 exports.default = _default;
-},{"axios":"node_modules/axios/index.js"}],"src/hooks/command-create.js":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","../../config.js":"config.js"}],"src/hooks/command-create.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53114,11 +53143,14 @@ exports.default = void 0;
 
 var _axios = _interopRequireDefault(require("axios"));
 
+var _config = _interopRequireDefault(require("../../config.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //General imports
+//Imports - config
 var commandCreate = function commandCreate(guildId, usage, response) {
-  return _axios.default.put("https://api.leaf-bot.xyz/api/discord/guilds/".concat(guildId, "/command-create"), {
+  return _axios.default.put("".concat(_config.default.domain, "/api/discord/guilds/").concat(guildId, "/command-create"), {
     usage: usage,
     response: response
   }, {
@@ -53129,7 +53161,7 @@ var commandCreate = function commandCreate(guildId, usage, response) {
 
 var _default = commandCreate;
 exports.default = _default;
-},{"axios":"node_modules/axios/index.js"}],"src/pages/settings/commands.jsx":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","../../config.js":"config.js"}],"src/pages/settings/commands.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53252,11 +53284,14 @@ exports.default = void 0;
 
 var _axios = _interopRequireDefault(require("axios"));
 
+var _config = _interopRequireDefault(require("../../config.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //General imports
+//Imports - config
 var updateGuildLevel = function updateGuildLevel(guildId, leveling) {
-  return _axios.default.put("https://api.leaf-bot.xyz/api/discord/guilds/".concat(guildId, "/leveling"), {
+  return _axios.default.put("".concat(_config.default.domain, "/api/discord/guilds/").concat(guildId, "/leveling"), {
     leveling: leveling
   }, {
     withCredentials: true
@@ -53266,7 +53301,7 @@ var updateGuildLevel = function updateGuildLevel(guildId, leveling) {
 
 var _default = updateGuildLevel;
 exports.default = _default;
-},{"axios":"node_modules/axios/index.js"}],"src/pages/settings/leveling.jsx":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","../../config.js":"config.js"}],"src/pages/settings/leveling.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53332,11 +53367,14 @@ exports.default = void 0;
 
 var _axios = _interopRequireDefault(require("axios"));
 
+var _config = _interopRequireDefault(require("../../config.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //General imports
+//Imports - config
 var updateGuildTickets = function updateGuildTickets(guildId, tickets) {
-  return _axios.default.put("https://api.leaf-bot.xyz/api/discord/guilds/".concat(guildId, "/tickets"), {
+  return _axios.default.put("".concat(_config.default.domain, "/api/discord/guilds/").concat(guildId, "/tickets"), {
     tickets: tickets
   }, {
     withCredentials: true
@@ -53346,7 +53384,7 @@ var updateGuildTickets = function updateGuildTickets(guildId, tickets) {
 
 var _default = updateGuildTickets;
 exports.default = _default;
-},{"axios":"node_modules/axios/index.js"}],"src/pages/settings/tickets.jsx":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","../../config.js":"config.js"}],"src/pages/settings/tickets.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53438,27 +53476,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //Font Awesome Icons
 var Content = function Content(props) {
   var home = function home() {
-    return window.location.href = "/dashboard/".concat(props.config.guildId, "/home");
+    return window.location.href = "/#/dashboard/".concat(props.config.guildId, "/home");
   };
 
   var settings = function settings() {
-    return window.location.href = "/dashboard/".concat(props.config.guildId, "/settings");
+    return window.location.href = "/#/dashboard/".concat(props.config.guildId, "/settings");
   };
 
   var music = function music() {
-    return window.location.href = "/dashboard/".concat(props.config.guildId, "/music");
+    return window.location.href = "/#/dashboard/".concat(props.config.guildId, "/music");
   };
 
   var tickets = function tickets() {
-    return window.location.href = "/dashboard/".concat(props.config.guildId, "/tickets");
+    return window.location.href = "/#/dashboard/".concat(props.config.guildId, "/tickets");
   };
 
   var leveling = function leveling() {
-    return window.location.href = "/dashboard/".concat(props.config.guildId, "/leveling");
+    return window.location.href = "/#/dashboard/".concat(props.config.guildId, "/leveling");
   };
 
   var commands = function commands() {
-    return window.location.href = "/dashboard/".concat(props.config.guildId, "/commands");
+    return window.location.href = "/#/dashboard/".concat(props.config.guildId, "/commands");
   };
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("section", {
@@ -53785,7 +53823,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55740" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52064" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

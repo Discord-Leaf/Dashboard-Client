@@ -9,6 +9,7 @@ import getUser from '../../hooks/getUser.js'
 import config from '../../../config.js';
 
 import logo from '../../assets/logo.png'
+import discord from '../../assets/discord.png';
 import menuarrow from '../../assets/menuarrow.svg';
 
 const Header = () => {
@@ -66,7 +67,11 @@ const Header = () => {
                 {user ?
                     <div className="user-wrapper">
                         <div>
-                            <img onClick={toggleMenu} src={`https://cdn.discordapp.com/avatars/${user.discordId}/${user.avatar}.png`} width="40px" height="40px" className="uimg"></img>
+                            {user.avatar === 'null' ?
+                            <img onClick={toggleMenu} src={discord} width="40px" height="40px" className="uimg" />
+                            :
+                            <img onClick={toggleMenu} src={`https://cdn.discordapp.com/avatars/${user.discordId}/${user.avatar}.png`} width="40px" height="40px" className="uimg"/>    
+                        }
                         </div>
                         <div>
                             <p className="name" onClick={toggleMenu} >{user.discordTag}</p>

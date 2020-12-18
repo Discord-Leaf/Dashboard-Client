@@ -1,8 +1,11 @@
 //General imports
 import axios from 'axios';
 
+//Imports - config
+import Config from '../../config.js';
+
 const commandCreate = (guildId, usage, response) => {
-    return axios.put(`https://api.leaf-bot.xyz/api/discord/guilds/${guildId}/command-create`, {
+    return axios.put(`${Config.domain}/api/discord/guilds/${guildId}/command-create`, {
         usage,
         response,
     }, {

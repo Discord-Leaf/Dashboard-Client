@@ -1,8 +1,11 @@
 //General imports
 import axios from 'axios';
 
+//Imports - config
+import Config from '../../config.js';
+
 const getGuilds = () => {
-    return axios.get('https://api.leaf-bot.xyz/api/discord/guilds', {
+    return axios.get(`${Config.domain}/api/discord/guilds`, {
         withCredentials: true
     })
 }
