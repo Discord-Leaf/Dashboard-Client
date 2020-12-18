@@ -12,7 +12,7 @@
     "gh-pages": "node gh-pages.js"
   },
   "type": "module",
-  "keywords": [],
+  "keywords": ["react", "bot", "dashboard", "react-dom", "discord"],
   "author": "Toadless",
   "license": "ISC",
   "devDependencies": {

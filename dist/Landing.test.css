@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10%;
+}
+
+.p {
+     color: #FFFFFFB3;
+     font-size: 19px;
+     font-family: 'Open Sans', sans-serif;
+     text-align: center;
+}
+
+.b3 {
+    height: 60px;
+    font-size: 17px;
+    padding: 10px 30px;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+body {
+    background-color: #24252a;
+}
+
+/* .ltitle {
+    margin-top: 0%;
+} */
+/* .ptitle {
+    margin-top: 0%;
+} */
+
+.btn-div {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    max-width: 30%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1300px) {
+    .btn-div {
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.black {
+    background-color: black;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to right, #4c4e67 , #323347);
+}
+
+li,
+a,
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgba(19, 20, 22, 0.56);
+  height: 55px;
+  width: 100%;
+  padding: 5px
+}
+
+.title {
+  color: white;
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  margin: 5;
+  top: 10;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #766df4;
+  transition: border 180ms ease-out 0s, background 180ms ease-out 0s;
+  /* border-color: rgb(238, 238, 238); */
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 14px;
+  font-family: "Open Sans", Helvetica, arial, sans-serif;
+  color: white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.headd {
+  /* background-color:#24252a; */
+  background-color: transparent;
+}
+
+.uimg {
+  object-fit: cover;
+  border-radius: 50%;
+  justify-content: flex-start;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.name {
+  font-family: "Open Sans", Helvetica, arial, sans-serif;
+  color: #c8ced3;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+b {
+  font-weight: 500;
+  color: white;
+  align-items: flex-end;
+  inline-size: auto;
+}
+
+nav {
+  flex: 1 1 0%;
+  margin-left: 30px;
+}
+
+.nav {
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  color: #FFFFFFB3;
+  text-align: left;
+  /* margin: 0 auto;
+  margin-right: 74%; */
+  display: inline;
+}
+
+.nav li {
+  display: inline;
+  white-space: nowrap;
+  padding: 10px;
+  color: #FFFFFFB3;
+}
+
+.user-wrapper {
+    display: flex;
+    margin-right: 10%
+}
+ 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+
+.t1 {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  margin-right: auto;
+  padding-left: 1%;
+  font-weight: 700;
+  font-size: 25px !important;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.logo {
+  margin-left: 10%;
+  cursor: pointer;
+}
+
+.nav_links {
+  color: #FFFFFFB3;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 850px) {
+  .nav li {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .user-wrapper {
+    margin-right: 0;
+  }
+  .logo {
+    margin-left: 0;
+  }
+}
+
+.drop-arrow {
+  margin-top: 17px;
+  margin-left: 10px;
+  top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0s, z-index 0s linear 0.3s;
+}
+
+.drop-arrow-flip {
+  margin-top: 17px;
+  margin-left: 10px;
+  top: 20px;
+  transform: rotate(180deg) scaleX(-1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0s, z-index 0s linear 0.3s;
+}
+
+.menu {
+  background-color: rgb(23, 24, 27);
+  box-shadow: rgb(0, 0, 0) 0px 1px 3px;
+  border-radius: 4px;
+  position: absolute;
+  top: 50px;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0s, z-index 0s linear 0.3s;
+  transform: translateY(0%);
+  opacity: 1;
+  width: 160px;
+  height: 80px;
+  color: rgb(166, 170, 181);
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.bbttnn {
+  background-color: transparent;
+  border: none;
+  color: rgb(166, 170, 181);
+}
+
+.logout {
+  color: rgb(167, 42, 57);
+  background-color: none;
+}
+
+.servers {
+  cursor: pointer;
+  background-color: none;
+}
+
+.bwrapper {
+  display: flex;
+  margin-right: 10%
+}
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #17181b;
+    color: white;
+    text-align: center;
+    height: 180px;
+    display: flex;
+    padding: 50px;
+}
+
+.ft {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 25px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+#h4 {
+    color: white;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#p {
+    color: #FFFFFFB3;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 80px;
+}
+
+@media only screen and (max-width: 600px) {
+    #text {
+        display: none;
+    }
+    .footer {
+        display: inline;
+    }
+    #list {
+        float: right;
+    }
+    #h4 {
+        float: left;
+    }
+}
+
+#list {
+    float: right;
+    margin-left: auto;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+#text {
+    size: 16px;
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    color: white;
+    bottom: 18%;
+}
+
+/*# sourceMappingURL=/Landing.test.css.map */
