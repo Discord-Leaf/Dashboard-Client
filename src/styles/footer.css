@@ -1,0 +1,70 @@
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #17181b;
+    color: white;
+    text-align: center;
+    height: 180px;
+    display: flex;
+    padding: 50px;
+}
+
+.ft {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 25px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+#h4 {
+    color: white;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#p {
+    color: #FFFFFFB3;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 80px;
+}
+
+@media only screen and (max-width: 600px) {
+    #text {
+        display: none;
+    }
+    .footer {
+        display: inline;
+    }
+    #list {
+        float: right;
+    }
+    #h4 {
+        float: left;
+    }
+}
+
+#list {
+    float: right;
+    margin-left: auto;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+#text {
+    size: 16px;
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    color: white;
+    bottom: 18%;
+}

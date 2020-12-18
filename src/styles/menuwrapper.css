@@ -1,0 +1,64 @@
+.svr {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto auto auto auto;
+  }
+  
+  h1 {
+    font-family: 'Poppins', Helvetica, arial, sans-serif;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .flex {
+    margin: auto auto auto auto;
+    max-width: 800px;
+    padding: 20px 0 0 0;
+  }
+  
+  .simg,
+  .btn,
+  .guildn {
+      display: inline;
+      margin-top: -26px;
+  }
+  
+  .simg {
+      float: left;
+  }
+  
+  .btn {
+    float:right;
+  }
+  
+  .guildn {
+    color: #FFFFFFB3;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-left: 20px;
+  }
+  
+  .db {
+    background-color: rgb(68, 179, 127);
+  }
+  
+  .su {
+    background-color: rgb(68, 71, 76);
+  }
+  
+  .headtitle {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');

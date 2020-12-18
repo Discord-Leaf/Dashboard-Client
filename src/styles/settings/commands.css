@@ -1,0 +1,25 @@
+table, td, th  {
+  border: 1px solid #ddd;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  margin-right: 800px;
+  margin-top: 40px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color:#24252a;
+  color: white;
+}
+
+th, td {
+  padding: 15px;
+}
+
+@media only screen and (max-width: 1000px) {
+    table {
+      width: 70%;
+      margin-left: 40px;
+    }
+}

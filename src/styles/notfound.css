@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10%;
+}
+
+.p {
+     color: #FFFFFFB3;
+     font-size: 19px;
+     font-family: 'Open Sans', sans-serif;
+     text-align: center;
+}
