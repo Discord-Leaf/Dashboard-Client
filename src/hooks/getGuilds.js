@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const getGuilds = () => {
-    return axios.get('http://localhost:3001/api/discord/guilds', {
+    return axios.get('https://api.leaf-bot.xyz/api/discord/guilds', {
         withCredentials: true
     })
 }

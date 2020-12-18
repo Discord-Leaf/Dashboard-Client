@@ -16,12 +16,12 @@ import { faSpinner, faHome, faCog, faMusic, faTicketAlt, faLevelUpAlt, faBars } 
 import { config } from '@fortawesome/fontawesome-svg-core';
 
 const Content = (props) => {
-    const home = () => window.location.href = `/dashboard/${props.config.guildId}/home`
-    const settings = () => window.location.href = `/dashboard/${props.config.guildId}/settings`
-    const music = () => window.location.href = `/dashboard/${props.config.guildId}/music`
-    const tickets = () => window.location.href = `/dashboard/${props.config.guildId}/tickets`
-    const leveling = () => window.location.href = `/dashboard/${props.config.guildId}/leveling`
-    const commands = () => window.location.href = `/dashboard/${props.config.guildId}/commands`
+    const home = () => window.location.href = `/#/dashboard/${props.config.guildId}/home`
+    const settings = () => window.location.href = `/#/dashboard/${props.config.guildId}/settings`
+    const music = () => window.location.href = `/#/dashboard/${props.config.guildId}/music`
+    const tickets = () => window.location.href = `/#/dashboard/${props.config.guildId}/tickets`
+    const leveling = () => window.location.href = `/#/dashboard/${props.config.guildId}/leveling`
+    const commands = () => window.location.href = `/#/dashboard/${props.config.guildId}/commands`
     return (
         <div>
           <section id="side-bar">

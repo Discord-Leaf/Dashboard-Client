@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
     Link
@@ -15,7 +15,7 @@ import DashboardPage from './pages/dashboardpage.js'
 import NotFound from './pages/notfound.js'
 
 ReactDOM.render(
-    <Router>
+    <Router basename="/">
         <Switch>
             <Route path="/dashboard/:id" key="guild" exact={true}>
                 <DashboardPage page={'home'} />

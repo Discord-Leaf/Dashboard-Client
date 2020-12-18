@@ -27,7 +27,7 @@ const Header = () => {
             })
     }, [])
     // const login = () => window.location.href = `${config.domain}/api/auth/discord`
-    const dashboard = () => window.location.href = '/servers'
+    const dashboard = () => window.location.href = '/#/servers'
     //External window login
     const login = () => {
         const wlogin = window.open(`${config.domain}/api/auth/discord`, 'Leaf - Login', "height=800,width=500");

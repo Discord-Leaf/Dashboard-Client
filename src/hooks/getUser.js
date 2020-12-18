@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const getUser = () => {
-    return axios.get('http://localhost:3001/api/auth', {
+    return axios.get('https://api.leaf-bot.xyz/api/auth', {
         withCredentials: true
     })
 }

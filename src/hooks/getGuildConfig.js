@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const getGuildConfig = (guildId) => {
-    return axios.get(`http://localhost:3001/api/discord/guilds/${guildId}/config`, {
+    return axios.get(`https://api.leaf-bot.xyz/api/discord/guilds/${guildId}/config`, {
         withCredentials: true
     })
 }
