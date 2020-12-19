@@ -20,7 +20,7 @@ const LandingPage = () => {
         }
     }
     return (
-        <div>
+        <div className="headcolors">
             <Header />
             <div className="dv">
                 <h1 className="ltitle h1">Leaf Bot</h1>

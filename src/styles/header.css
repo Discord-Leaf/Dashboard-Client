@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: linear-gradient(to right, #4c4e67 , #323347);
+  background-color: #34383c;
 }
 
 li,
@@ -62,8 +62,7 @@ button {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .headd {
-  /* background-color:#24252a; */
-  background-color: transparent;
+  background-color:#24252a;
 }
 
 .uimg {

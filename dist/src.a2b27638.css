@@ -24,10 +24,6 @@
     text-align: center;
 }
 
-body {
-    background-color: #24252a;
-}
-
 /* .ltitle {
     margin-top: 0%;
 } */
@@ -54,6 +50,16 @@ body {
 .black {
     background-color: black;
 }
+
+
+body {
+    background-color: #24252a;
+}
+
+.headcolors {
+    background-color: #24252a;
+    height: 100%;
+}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 * {
@@ -63,7 +69,7 @@ body {
 }
 
 body {
-  background-image: linear-gradient(to right, #4c4e67 , #323347);
+  background-color: #34383c;
 }
 
 li,
@@ -118,8 +124,7 @@ button {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .headd {
-  /* background-color:#24252a; */
-  background-color: transparent;
+  background-color:#24252a;
 }
 
 .uimg {
@@ -803,6 +808,5 @@ th, td {
      font-family: 'Open Sans', sans-serif;
      text-align: center;
 }
-
 
 /*# sourceMappingURL=/src.a2b27638.css.map */

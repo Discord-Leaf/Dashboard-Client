@@ -35984,15 +35984,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //General imports
 //Local imports
 var Footer = function Footer() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    className: "wave",
-    viewBox: "0 0 1440 320"
-  }, /*#__PURE__*/_react.default.createElement("path", {
-    fill: "#17181b",
-    fillOpacity: "1",
-    d: "M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "footer"
   }, /*#__PURE__*/_react.default.createElement("p", {
     className: "footer-content",
@@ -36039,7 +36031,9 @@ var LandingPage = function LandingPage() {
     }
   };
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "headcolors"
+  }, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement("div", {
     className: "dv"
   }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "ltitle h1"
@@ -53823,7 +53817,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52064" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55219" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -24,10 +24,6 @@
     text-align: center;
 }
 
-body {
-    background-color: #24252a;
-}
-
 /* .ltitle {
     margin-top: 0%;
 } */
@@ -53,4 +49,14 @@ body {
 
 .black {
     background-color: black;
+}
+
+
+body {
+    background-color: #24252a;
+}
+
+.headcolors {
+    background-color: #24252a;
+    height: 100%;
 }
