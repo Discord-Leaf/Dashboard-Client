@@ -25,7 +25,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   color: rgba(19, 20, 22, 0.56);
-  height: 55px;
+  height: 72px;
   width: 100%;
   padding: 5px
 }
@@ -43,7 +43,7 @@ header {
 button {
   margin-left: 20px;
   padding: 9px 25px;
-  background-color: #766df4;
+  background-color: #5db406;
   transition: border 180ms ease-out 0s, background 180ms ease-out 0s;
   /* border-color: rgb(238, 238, 238); */
   white-space: nowrap;
