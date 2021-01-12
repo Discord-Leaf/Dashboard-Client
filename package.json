@@ -1,24 +1,31 @@
 {
   "name": "leaf-dashboard-client",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "A discord bot dashboard developed in React by Toadless",
   "main": "index.js",
   "homepage": "https://leaf-bot.xyz",
   "private": "true",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html",
+    "dev": "yarn parcel index.html",
+    "build": "yarn parcel build index.html",
     "test": "node src/tests/Landing.test.js",
     "gh-pages": "node gh-pages.js"
   },
   "type": "module",
-  "keywords": ["react", "bot", "dashboard", "react-dom", "discord"],
+  "keywords": [
+    "react",
+    "bot",
+    "dashboard",
+    "react-dom",
+    "discord"
+  ],
   "author": "Toadless",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.15.0",
     "eslint-plugin-react": "^7.21.5",
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.1.0",
+    "sass": "^1.30.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.main-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#grid-container {
+margin-top: 25px;
+display: grid;
+grid-template-columns: 350px 350px 350px;
+grid-gap: 18px 1px;
+-webkit-box-pack: center;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+.grid-icon {
+    margin-left: -20px;
+    margin-top: -5px;
+}
+
+.grid-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.grid-item {
+background-color:rgb(62, 66, 70);
+box-shadow: rgba(0, 0, 0, 0.125) 0px 0px 10px;
+display: flex;
+opacity: opacity 175ms ease-out 0s;
+flex-direction: row;
+border-radius: 2px;
+transition: opacity 175ms ease-out 0s;
+position: relative;
+overflow: hidden;
+cursor: pointer;
+width: 330px;
+height: 120px;
+padding: 25px 30px;
+padding-inline-start: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+    #grid-container {
+        grid-template-columns: 350px 350px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #grid-container {
+    grid-template-columns: 500px;
+    }
+}
+
+.simg {
+object-fit: cover;
+border-radius: 50%;
+display: inline-flex;
+margin-top: -15px;
+}
+
+.selecter {
+font-family: 'Open Sans', sans-serif;
+outline: 0;
+border: 0.7px solid  #2196F3;
+background-color: #3f444b;
+border-radius: 4px;
+width: 200px;
+height: 30px;
+color: white;
+font-size: 15px;
+position: relative;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer:hover {
+    color: #766df4;
+}
+
+.exclamation {
+    margin-left: 170px;
+    margin-top: -45px;
+    cursor: pointer;
+}
+
+.form {
+    float: left;
+    position: sticky;
+    margin-right: 30px;
+    padding-right: 30px;
+}
+
+.tab {
+    margin-left: 300px;
+}
+
+.content {
+    margin-left: 400px;
+}
+
+.serverimage {
+    border-radius: 50px;
+    margin-left: 15%;
+    margin-top: 10px;
+}
+
+.servertext {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    left: 27%;
+    color: white;
+    margin-top: -40px;
+}
+
+.dividor {
+    width: 80%;
+    height: 2px;
+    background-color: #707070;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}

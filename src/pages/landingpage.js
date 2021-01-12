@@ -23,8 +23,8 @@ const LandingPage = () => {
         <div className="headcolors">
             <Header />
             <div className="dv">
-                <h1 className="ltitle h1">Leaf Bot</h1>
-                <p className="ptitle p">Configure leveling, music, tickets and much more with the dashboard!</p>
+                <h1 className="ltitle h1">The best bot out there</h1>
+                <p className="ptitle p">Leaf is a multi purpose discord bot that is designed to make your discord server better. <br />It also features a web dashboard to fully customise leaf for your purpose.</p>
                 <div className="btn-div">
                     <button
                         className="b3"

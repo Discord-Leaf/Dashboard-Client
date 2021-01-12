@@ -52,72 +52,84 @@ const Header = () => {
     }
     if (!loading) {
         return !loading && (
-            <header className="headd">
-                <title>Leaf</title>
-                <img src={logo} onClick={home} width="40px" height="40px" className="logo" />
-                <h1 className="t1" onClick={home} href="/">Leaf</h1>
-                <nav>
-                    <ul className="nav">
-                        <li className="nav_links">Commands</li>
-                        <li className="nav_links" onClick={dashboard}>Dashboard</li>
-                        <li className="nav_links">Docs</li>
-                        <li className="nav_links">Github</li>
-                    </ul>
-                </nav>
-                {user ?
-                    <div className="user-wrapper">
-                        <div>
-                            {user.avatar === 'null' ?
-                            <img onClick={toggleMenu} src={discord} width="40px" height="40px" className="uimg" />
-                            :
-                            <img onClick={toggleMenu} src={`https://cdn.discordapp.com/avatars/${user.discordId}/${user.avatar}.png`} width="40px" height="40px" className="uimg"/>    
-                        }
-                        </div>
-                        <div>
-                            <p className="name" onClick={toggleMenu} >{user.discordTag}</p>
-                        </div>
-                        <div>
+            <div>
+                <div className="bar"></div>
+                <header className="headd">
+                    <title>Leaf</title>
+                    <img src={logo} onClick={home} width="40px" height="40px" className="logo" />
+                    <h1 className="t1" onClick={home} href="/">Leaf</h1>
+                    <div className="seperator">
+
+                    </div>
+                    <nav>
+                        <ul className="nav">
+                            <li className="nav_links">Commands</li>
+                            <li className="nav_links" onClick={dashboard}>Dashboard</li>
+                            <li className="nav_links">Docs</li>
+                            <li className="nav_links">Github</li>
+                        </ul>
+                    </nav>
+                    {user ?
+                        <div className="user-wrapper">
+                            <div>
+                                {user.avatar === 'null' ?
+                                    <img onClick={toggleMenu} src={discord} width="40px" height="40px" className="uimg" />
+                                    :
+                                    <img onClick={toggleMenu} src={`https://cdn.discordapp.com/avatars/${user.discordId}/${user.avatar}`} width="40px" height="40px" className="uimg" />
+                                }
+                            </div>
+                            <div>
+                                <p className="name" onClick={toggleMenu} >{user.discordTag}</p>
+                            </div>
+                            <div>
+                                {showMenu ?
+                                    <img src={menuarrow} onClick={toggleMenu} className="drop-arrow-flip" />
+                                    :
+                                    <img src={menuarrow} onClick={toggleMenu} className="drop-arrow" />
+                                }
+                            </div>
                             {showMenu ?
-                                <img src={menuarrow} onClick={toggleMenu} className="drop-arrow-flip" />
+                                <div className="menu">
+                                    <div className="servers">
+                                        <button className="bbttnn servers" onClick={dashboard}>My servers</button>
+                                    </div>
+                                    <div className="logout">
+                                        <button className="bbttnn logout" onClick={logout}>Logout</button>
+                                    </div>
+                                </div>
                                 :
-                                <img src={menuarrow} onClick={toggleMenu} className="drop-arrow" />
+                                null
                             }
                         </div>
-                        {showMenu ?
-                            <div className="menu">
-                                <div className="servers">
-                                    <button className="bbttnn servers" onClick={dashboard}>My servers</button>
-                                </div>
-                                <div className="logout">
-                                    <button className="bbttnn logout" onClick={logout}>Logout</button>
-                                </div>
-                            </div>
-                            :
-                            null
-                        }
-                    </div>
-                    :
-                    <div className="bwrapper" >
-                        <button onClick={login}>Login</button>
-                    </div>
-                }
-            </header>
+                        :
+                        <div className="bwrapper" >
+                            <button onClick={login}>Login</button>
+                        </div>
+                    }
+                </header>
+            </div>
         )
     } else {
         return (
-            <header className="headd">
-                <img src={logo} onClick={home} width="40px" height="40px" className="logo" />
-                <title>Leaf</title>
-                <h1 className="t1" onClick={home} href="/">Leaf</h1>
-                <nav>
-                    <ul className="nav">
-                        <li className="nav_links">Commands</li>
-                        <li className="nav_links" onClick={dashboard}>Dashboard</li>
-                        <li className="nav_links">Docs</li>
-                        <li className="nav_links">Github</li>
-                    </ul>
-                </nav>
-            </header>
+            <div>
+                <div className="bar"></div>
+                <header className="headd">
+                    <img src={logo} onClick={home} width="40px" height="40px" className="logo" />
+                    <title>Leaf</title>
+                    <h1 className="t1" onClick={home} href="/">Leaf</h1>
+                    <div className="seperator">
+
+                    </div>
+                    <nav>
+                        <ul className="nav">
+                            <li className="nav_links">Commands</li>
+                            <li className="nav_links" onClick={dashboard}>Dashboard</li>
+                            <li className="nav_links">Docs</li>
+                            <li className="nav_links">Github</li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
         )
     }
 }

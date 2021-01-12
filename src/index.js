@@ -23,8 +23,8 @@ ReactDOM.render(
             <Route path="/dashboard/:id/home" key="guild" exact={true}>
                 <DashboardPage page={'home'} />
             </Route>
-            <Route path="/dashboard/:id/settings" key="guild" exact={true}>
-                <DashboardPage page={'settings'} />
+            <Route path="/dashboard/:id/prefix" key="guild" exact={true}>
+                <DashboardPage page={'prefix'} />
             </Route>
             <Route path="/dashboard/:id/music" key="guild" exact={true}>
                 <DashboardPage page={'music'} />
@@ -37,6 +37,12 @@ ReactDOM.render(
             </Route>
             <Route path="/dashboard/:id/commands" key="guild" exact={true}>
                 <DashboardPage page={'commands'} />
+            </Route>
+            <Route path="/dashboard/:id/link" key="guild" exact={true}>
+                <DashboardPage page={'link'} />
+            </Route>
+            <Route path="/dashboard/:id/help" key="guild" exact={true}>
+                <DashboardPage page={'help'} />
             </Route>
             <Route path="/servers" key="menu" exact={true}>
                 <ServerPage />

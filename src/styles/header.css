@@ -43,7 +43,7 @@ header {
 button {
   margin-left: 20px;
   padding: 9px 25px;
-  background-color: #5db406;
+  background-color: #ad91ff;
   transition: border 180ms ease-out 0s, background 180ms ease-out 0s;
   /* border-color: rgb(238, 238, 238); */
   white-space: nowrap;
@@ -128,6 +128,13 @@ nav {
   font-weight: 500;
 }
 
+.seperator {
+  border-right: 0.5px solid rgba(255, 255, 255, 0.65);
+  width: 3px;
+  height: 25px;
+  margin-left: 20px;
+}
+
 .logo {
   margin-left: 10%;
   cursor: pointer;
@@ -208,4 +215,12 @@ nav {
 .bwrapper {
   display: flex;
   margin-right: 10%
+}
+
+.bar {
+  background-color: #ad91ff;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 3px;
 }

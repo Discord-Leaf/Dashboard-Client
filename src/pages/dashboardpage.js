@@ -9,10 +9,13 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 //Local imports
 import Header from '../components/Header/header.js';
 import getUser from '../hooks/getUser.js';
-import Prefix from './settings/prefix.jsx';
 import getGuildConfig from '../hooks/getGuildConfig.js';
-import Content from './settings/content.jsx';
-import Music from './settings/music.jsx';
+import Content from './content.js';
+import Music from './settings/music.js';
+import Prefix from './settings/prefix.js';
+import Tickets from './settings/tickets.js';
+import Leveling from './settings/leveling.js';
+import Commands from './settings/commands.js';
 
 const DashboardPage = (props) => {
     const [user, setUser] = React.useState(null);
@@ -35,12 +38,54 @@ const DashboardPage = (props) => {
             })
     }, [])
     if (!loading) {
-        return !loading && (
-            <div>
-                <Header />
-                <Content config={config} page={props.page} />
-            </div>
-        )
+        if (props.page === 'home') {
+            return !loading && (
+                <div>
+                    <Header />
+                    <Content config={config} />
+                </div>
+            )
+        }
+        if (props.page === 'music') {
+            return !loading && (
+                <div>
+                    <Header />
+                    <Music config={config} />
+                </div>
+            )
+        }
+        if (props.page === 'prefix') {
+            return !loading && (
+                <div>
+                    <Header />
+                    <Prefix config={config} />
+                </div>
+            )
+        }
+        if (props.page === 'tickets') {
+            return !loading && (
+                <div>
+                    <Header />
+                    <Tickets config={config} />
+                </div>
+            )
+        }
+        if (props.page === 'leveling') {
+            return !loading && (
+                <div>
+                    <Header />
+                    <Leveling config={config} />
+                </div>
+            )
+        }
+        if (props.page === 'commands') {
+            return !loading && (
+                <div>
+                    <Header />
+                    <Commands config={config} />
+                </div>
+            )
+        }
     } else {
         return (
             <div>
