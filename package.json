@@ -9,7 +9,7 @@
     "dev": "yarn parcel index.html",
     "build": "yarn parcel build index.html",
     "test": "node src/tests/Landing.test.js",
-    "gh-pages": "node gh-pages.js"
+    "push": "node gh-pages.js"
   },
   "type": "module",
   "keywords": [

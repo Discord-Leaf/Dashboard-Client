@@ -1,6 +1,6 @@
 const Config = {
     // "domain": "https://api.leaf-bot.xyz",
-    "domain": "http://localhost:3001",
+    "domain": "https://api.leaf-bot.xyz",
     "client_id": "782729707740200980"
 }
 
